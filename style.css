@@ -1,0 +1,139 @@
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1,
+h3 {
+    font-family: cursive;
+    text-align: center;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    font-family: cursive;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 550px;
+    height: 400px;
+}
+
+.pokedex {
+    width: 100%;
+    height: 100%;
+}
+
+.pokeImg {
+    position: absolute;
+    height: 120px;
+    width: 175px;
+    top: 120px;
+    left: 55px;
+}
+
+.search_button {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    top: 282px;
+    left: 30px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#nombrePokemon {
+    position: absolute;
+    top: 325px;
+    left: 60px;
+    height: 40px;
+    width: 95px;
+    border-radius: 7px;
+    background-color: #bbff00;
+    text-align: center;
+    font-family: cursive;
+}
+
+.info_pokemon {
+    position: absolute;
+    top: 130px;
+    left: 330px;
+    height: 65px;
+    width: 180px;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#name,
+#type,
+#type_info {
+    text-align: center;
+    margin: 0;
+}
+
+.inline {
+    display: inline;
+}
+
+.type {
+    text-align: center;
+    position: absolute;
+    top: 345px;
+    left: 330px;
+    height: 33px;
+    width: 80px;
+    border-radius: 7px;
+    background-color: rgb(250, 131, 34);
+    border: solid 2px black;
+}
+
+.type_info {
+    position: absolute;
+    top: 345px;
+    left: 425px;
+    height: 33px;
+    width: 80px;
+    border-radius: 7px;
+    background-color: rgb(250, 131, 34);
+    border: solid 2px black;
+}
+
+.abilities,
+.moves {
+    margin-left: 3px;
+}
+
+.abilities_moves {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 290px;
+    margin-right: 2px;
+    left: 400px;
+    width: 70px;
+    height: 20px;
+}
+
+.btn_abilities_moves {
+    width: 100%;
+    background-color: #bbff00;
+    border-radius: 10px;
+}

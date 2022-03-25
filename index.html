@@ -3,70 +3,115 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex Practica</title>
+    <link rel="stylesheet" href="grid.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <title>Pokédex</title>
 </head>
 
 <body>
-    <div>
-        <div>
-            <h1>Bienvenido a tu pokedex</h1>
-            <h3>Encuentra los datos de pokemones escribiendo su nombre</h3>
-        </div>
+    <header>
+        <h1>Bienvenido a este tu pokedex</h1>
+        <h3>Busca el Pokemon que desees</h3>
+    </header>
 
-        <div>
-            <input type="text" id="nombrePokemon" placeholder="Inserta el nombre del Pokemon"> <br>
-
-            <img id="pokeImg" src="resources/pokebola.png" style="width:250px"><br>
-            <p id="pokeName">Nombre del pokemon</p>
-            <p id="tipoPoke">Tipo del Pokemon</p>
-            <button type="submit" onclick="fetchPokemon()" id="enviarPokemon">Enviar</button>
-        </div>
-        <div id="pokemonStats">
-            Estadisticas del pokemon
-            <table id="statPokeTable">
-                <tr>
-                    <th>Stat Name</th>
-
-                    <th>Stat Data</th>
-                </tr>
-                <tr>
-                    <td>Vida</td>
-                    <td id="1"></td>
-                </tr>
-                <tr>
-                    <td>Ataque</td>
-                    <td id="2"></td>
-                </tr>
-                <tr>
-                    <td>Defensa</td>
-                    <td id="3"></td>
-                </tr>
-                <tr>
-                    <td>Ataque especial</td>
-                    <td id="4"></td>
-                </tr>
-                <tr>
-                    <td>Defensa especial</td>
-                    <td id="5"></td>
-                </tr>
-                <tr>
-                    <td>Velocidad</td>
-                    <td id="6"></td>
-                </tr>
-            </table>
-
-        </div>
-        <div id="movPoke">
-            Movimientos disponibles
+    <div class="flex-center">
+        <div class="container">
+            <img src="resources/pokedex1.png" class="pokedex">
+            <div class="screen_pokemon">
+                <img src="resources/pokebola.png" alt="pokeball" id="pokeImg" class="pokeImg">
+            </div>
+            <div class="search_container">
+                <input type="text" placeholder="Poké Name" id="nombrePokemon" name="nombrePokemon">
+                <button type="button" onclick="fetchPokemon()" class="search_button"></button>
+            </div>
+            <div class="info">
+                <label class="info_pokemon">
+                    <div class="basic_info">
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="name"></p>
+                            </div>
+                        </div>
+                        <div class="row" style="text-align: center;">
+                            <div class="col-6">
+                                <p id="atk" class="inline"></p>
+                            </div>
+                            <div class="col-6">
+                                <p id="def" class="inline"></p>
+                            </div>
+                        </div>
+                        <div class="row" style="text-align: center;">
+                            <div class="col-6">
+                                <p id="hp" class="inline"></p>
+                            </div>
+                            <div class="col-6">
+                                <p id="speed" class="inline"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="abilities" style="display: none;">
+                        <div class="row">
+                            <div class="col-5">
+                                <p class="inline">first:</p>
+                            </div>
+                            <div class="col-7">
+                                <p id="first_ability" class="inline"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <p class="inline">second:</p>
+                            </div>
+                            <div class="col-7">
+                                <p id="second_ability" class="inline"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <p class="inline">hidden:</p>
+                            </div>
+                            <div class="col-7">
+                                <p id="hidden_ability" class="inline"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moves" style="display: none;">
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="first_move" class="inline"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="second_move" class="inline"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="third_move" class="inline"></p>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <div class="abilities_moves">
+                    <button type="button" id="abilities" class="btn_abilities_moves">Abilities</button>
+                    <button type="button" id="moves" class="btn_abilities_moves">Moves</button>
+                </div>
+                <label class="type">
+                    <p id="type">Type:</p>
+                </label>
+                <label class="type_info">
+                    <p id="type_info"></p>
+                </label>
+            </div>
         </div>
     </div>
-
 </body>
-
 <footer>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
 </footer>
 
 </html>
