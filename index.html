@@ -18,13 +18,45 @@
         <div>
             <input type="text" id="nombrePokemon" placeholder="Inserta el nombre del Pokemon"> <br>
 
-            <img src="resources/pokebola.png" style="width:250px"><br>
+            <img id="pokeImg" src="resources/pokebola.png" style="width:250px"><br>
             <p id="pokeName">Nombre del pokemon</p>
             <p id="tipoPoke">Tipo del Pokemon</p>
             <button type="submit" onclick="fetchPokemon()" id="enviarPokemon">Enviar</button>
         </div>
-        <div id="statsPoke">
+        <div id="pokemonStats">
             Estadisticas del pokemon
+            <table id="statPokeTable">
+                <tr>
+                    <th>Stat Name</th>
+
+                    <th>Stat Data</th>
+                </tr>
+                <tr>
+                    <td>Vida</td>
+                    <td id="1"></td>
+                </tr>
+                <tr>
+                    <td>Ataque</td>
+                    <td id="2"></td>
+                </tr>
+                <tr>
+                    <td>Defensa</td>
+                    <td id="3"></td>
+                </tr>
+                <tr>
+                    <td>Ataque especial</td>
+                    <td id="4"></td>
+                </tr>
+                <tr>
+                    <td>Defensa especial</td>
+                    <td id="5"></td>
+                </tr>
+                <tr>
+                    <td>Velocidad</td>
+                    <td id="6"></td>
+                </tr>
+            </table>
+
         </div>
         <div id="movPoke">
             Movimientos disponibles
